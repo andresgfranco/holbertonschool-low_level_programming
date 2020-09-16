@@ -1,9 +1,9 @@
 #include <stdio.h>
-/*
-   * main - A program that prints a string with puts
+/**
+   *main - A program that prints a string with puts
    *
-   * return - 0
-*/
+   *Return: 0
+**/
 int main(void)
 {
 
