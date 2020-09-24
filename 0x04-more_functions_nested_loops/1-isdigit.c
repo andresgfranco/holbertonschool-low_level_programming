@@ -3,7 +3,7 @@
   * _isdigit - checks for a digit
   *
   * @c: integer
-  * Return: 1 if c is uppercase or 0 otherwise
+  * Return: 1 if c is t or 0 otherwise
 **/
 int _isdigit(int c)
 {
