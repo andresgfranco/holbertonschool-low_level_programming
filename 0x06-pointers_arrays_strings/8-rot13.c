@@ -10,13 +10,14 @@ char *rot13(char *s)
 	char regular[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char rot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	for(i = 0; s[i] != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
 		for (j = 0; regular[j] != '\0'; j++)
 		{
 			if (s[i] == regular[j])
 			{
 				s[i] = rot[j];
+				break;
 			}
 		}
 		j = 0;
