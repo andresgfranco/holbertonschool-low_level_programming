@@ -6,20 +6,14 @@
 **/
 char *string_toupper(char *s)
 {
-	int i, j;
-	char low[] = "abcdefghijklmnopqrstuvwxyz";
-	char upper[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
+	int i;
+	
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = 0; low[j] != '\0'; j++)
+		if (s[i] >= 'a' && s[i] <= 'z')
 		{
-			if (s[i] == low[j])
-			{
-				s[i] = upper[j];
-			}
+			s[i] = s[i] - 32;
 		}
-		j = 0;
 	}
 	return (s);
 }
