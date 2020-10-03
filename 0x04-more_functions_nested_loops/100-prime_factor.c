@@ -9,4 +9,6 @@ int main(void)
 	long long int n = 612852475143 / 3;
 
 	printf("%lld\n", n);
+
+	return (0);
 }
