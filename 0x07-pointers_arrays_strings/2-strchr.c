@@ -15,9 +15,9 @@ char *_strchr(char *s, char c)
 		if (s[i] == c)
 		{
 			ocurrence = &s[i];
+			break;
 		}
-		else
-			ocurrence = '\0';
+		ocurrence = '\0';
 	}
 
 	return (ocurrence);
