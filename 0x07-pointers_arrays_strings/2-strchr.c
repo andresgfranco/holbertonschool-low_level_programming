@@ -10,16 +10,13 @@ char *_strchr(char *s, char c)
 	int i;
 	char *ocurrence;
 
-	for (i = 0; s[i] + 1; i++)
+	for (i = 0; s[i] <= '\0'; i++)
 	{
 		if (s[i] == c)
 		{
-			ocurrence = &s[i];
-			break;
+			return(&s[i]);
 		}
-		else
-			ocurrence = '\0';
 	}
 
-	return (ocurrence);
+	return ('\0');
 }
