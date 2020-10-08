@@ -8,47 +8,19 @@
 **/
 char *_strstr(char *haystack, char *needle)
 {
-	int p, i, j;
+	char *a, *c;
 
-	p = compare(haystack, needle);
-
-	if (p == 1)
+	while (*haystack)
 	{
-		for (i = 0; haystack[i] != '\0'; i++)
+		c = haystack;
+		a = needle;
+		while (*a == *haystack && *a)
 		{
-			for (j = 0; haystack[i] == needle[j]; j++)
-			{
-				return (&needle[j]);
-			}
+			haystack++, a++;
 		}
+		if (*a == '\0')
+			return (c);
+		haystack = c + 1;
 	}
-
-	return (NULL);
-}
-/**
-  * compare - determine if there is a similar substring
-  * @haystack: main string
-  * @needle: substring
-  * Return: 0 if there is a substring
-  * 1 if not
-**/
-
-int compare(char *haystack, char *needle)
-{
-	int l, m = 0;
-
-	for (l = 0; haystack[l] != '\0'; l++)
-	{
-		if (haystack[l] == needle[m])
-		{
-			for (; haystack[l] == needle[m]; m++)
-			{
-				if (haystack[l + 1] == needle[m + 1])
-					continue;
-				else
-					return (0);
-			}
-		}
-	}
-	return (1);
+	return (0);
 }
