@@ -2,6 +2,8 @@
 #define DOG_H_
 
 #include <stdlib.h>
+#include <stdio.h>
+
 /**
   * struct dog - data type to save dogs basic data
   * @name: dog's name
@@ -16,6 +18,6 @@ struct dog
 } dog;
 
 void init_dog(struct dog *d, char *name, float age, char *owner);
-
+void print_dog(struct dog *d);
 
 #endif
