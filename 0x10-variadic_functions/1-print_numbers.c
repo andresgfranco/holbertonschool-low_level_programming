@@ -12,8 +12,11 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	if (n == 0)
 		return;
-	va_start(valist, n);
+	if (separator == NULL)
+		separator = "";
 
+	va_start(valist, n);
+	
 	for (i = 0; i < n; i++)
 	{
 		if (i == (n - 1))
