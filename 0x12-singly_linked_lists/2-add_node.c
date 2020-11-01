@@ -24,10 +24,10 @@ list_t *add_node(list_t **head, const char *str)
 	return (new_head);
 }
 /**
-    * _strlen - returns the lenght of a string
-      * @s: string coming
-        * Return: lenght of a string
-	**/
+ * _strlen - returns the lenght of a string
+ * @s: string coming
+ * Return: lenght of a string
+ **/
 unsigned int _strlen(const char *s)
 {
 	unsigned int l;
