@@ -29,7 +29,7 @@ list_t *add_node(list_t **head, const char *str)
 		}
 		aux->next = last_node;
 	}
-	return (last_node);
+	return (*head);
 }
 /**
  * _strlen - returns the lenght of a string
