@@ -7,26 +7,25 @@ unsigned int _strlen(const char *s);
   * Return: the address of the new element
   * or NULL if it failed
 **/
-list_t *add_node(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *last_node, *aux;
 
 	last_node = (list_t *) malloc(sizeof(list_t));
-	if (new_head == NULL)
+	if (last_node == NULL)
 		return (NULL);
 
 	last_node->str = strdup(str);
 	last_node->len = _strlen(str);
 	last_node->next = NULL;
+	
 	if (*head == NULL)
 		*head = last_node;
 	else
 	{
 		aux = *head;
 		while (aux->next != NULL)
-		{
 			aux = aux->next;
-		}
 		aux->next = last_node;
 	}
 	return (*head);
