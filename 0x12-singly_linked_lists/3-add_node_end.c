@@ -1,7 +1,7 @@
 #include "lists.h"
 unsigned int _strlen(const char *s);
 /**
-  * add_node - adds a new node at the beginning of a list
+  * add_node_end - adds a new node at the end of a list
   * @head: first element of list
   * @str: string to be duplicated
   * Return: the address of the new element
@@ -18,7 +18,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	last_node->str = strdup(str);
 	last_node->len = _strlen(str);
 	last_node->next = NULL;
-	
+
 	if (*head == NULL)
 		*head = last_node;
 	else
