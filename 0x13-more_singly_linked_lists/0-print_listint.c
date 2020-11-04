@@ -6,16 +6,13 @@
 **/
 size_t print_listint(const listint_t *h)
 {
-	int i;
+	size_t i;
 
 	for (i = 0; h != NULL; i++)
 	{
-		if (h->str == NULL)
-			printf("[0] (nil)");
-		else
-			printf("[%d] %s", h->len, h->str);
+		printf("%d", h->n);
 		h = h->next;
 		printf("\n");
 	}
-		return (i);
+	return (i);
 }
