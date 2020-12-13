@@ -28,6 +28,6 @@ while (aux->next != NULL)
 aux = aux->next;
 }
 aux->next = last_node;
-aux->prev = aux;
+last_node->prev = aux;
 return (*head);
 }
