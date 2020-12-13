@@ -20,7 +20,7 @@ if (*head == NULL)
 {
 last_node->prev = NULL;
 *head = last_node;
-return (NULL);
+return (*head);
 }
 aux = *head;
 while (aux->next != NULL)
