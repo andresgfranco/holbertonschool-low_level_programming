@@ -37,6 +37,7 @@ int add_new_node(hash_node_t **array, const char *key, const char *value)
 	{
 		if (strcmp(key, temp_existing_key->key) == 0)
 		{
+			free(temp_existing_key->value);
 			temp_existing_key->value = strdup(value);
 			return (1);
 		}
