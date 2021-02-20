@@ -1,0 +1,6 @@
+#Variables declaration
+CC=gcc
+SRC=*.c
+
+all:
+	gcc main.c holberton.c -o holberton
